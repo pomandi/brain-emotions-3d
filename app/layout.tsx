@@ -4,6 +4,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'BrainMap3D — Duyguların Beyin Haritası',
   description: 'İnteraktif 3D beyin modeli üzerinde duyguların hangi beyin bölgelerini aktive ettiğini keşfedin.',
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: 'BrainMap3D — Duyguların Beyin Haritası',
     description: 'İnteraktif 3D beyin modeli üzerinde duyguların beyin bölgelerini keşfedin.',
