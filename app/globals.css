@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a0a1a;
+  --bg-panel: rgba(26, 26, 46, 0.85);
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0c0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* No scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Emotion card hover glow */
+.emotion-card {
+  transition: all 0.3s ease;
+}
+.emotion-card:hover {
+  transform: translateX(4px);
+}
+.emotion-card.active {
+  border-left: 3px solid var(--accent-color, #fff);
+  background: rgba(255,255,255,0.08);
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(26, 26, 46, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Pulse dot */
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+}
+.pulse-dot {
+  animation: pulseDot 2s ease-in-out infinite;
+}
